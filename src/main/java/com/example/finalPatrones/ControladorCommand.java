@@ -57,25 +57,7 @@ public class ControladorCommand {
         return slafi.Listar();
     }
     
-    /*@RequestMapping("/slafi")
-    @PostMapping
-    public Slafi agregarSlafi(@RequestBody Slafi s){
-        return slafi.agregar(s);
-    }
-    
-    @RequestMapping("/slafi")
-    @GetMapping(path = {"/{id}"})
-    public Slafi listarIdSlafi(int id){
-    return slafi.listarId(id);
-    }
-    
-    @RequestMapping("/slafi")
-    @PutMapping(path = {"/{id}"})
-    public Slafi editarSlafi(@RequestBody Slafi s,@PathVariable("id")int id){
-        s.setId(id);
-        return slafi.editar(s);
-    }*/
-    
+
     @RequestMapping("/sipen")
     @GetMapping
     public List<Sipen>listarSipen(){ 
