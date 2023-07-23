@@ -2,48 +2,48 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.example.finalPatrones.Slafi;
+package com.example.finalPatrones.Service;
 
-
-
-import java.util.List;
+import com.example.finalPatrones.Entity.Sipen;
+import com.example.finalPatrones.Repository.SipenRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  *
  * @author el_pipe
  */
 @Service
-public class SlafiServiceImp implements SlafiService{
+public class SipenServiceImp implements SipenService {
     
     @Autowired
-    private SlafiRepositorio repositorio;
+    private SipenRepositorio repositorio;
     
-    @Override
-    public List<Slafi> Listar(){
+     @Override
+    public List<Sipen> Listar(){
         return repositorio.findAll();
     }
     
     @Override
-    public Slafi listarId(int id){
+    public Sipen listarId(int id){
         return repositorio.findById(id);
     }
     
     @Override
-    public Slafi agregar(Slafi s){
+    public Sipen agregar(Sipen s){
         return repositorio.save(s);
     }
     
     @Override
-    public Slafi editar(Slafi s){
+    public Sipen editar(Sipen s){
         return repositorio.save(s); //verificar y poner un método válido
     }
     
     @Override
-    public Slafi eliminar(int id){
+    public Sipen eliminar(int id){
         
         return null;   
     }
-   
 }

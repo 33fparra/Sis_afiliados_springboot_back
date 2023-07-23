@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.example.finalPatrones.Scex;
+package com.example.finalPatrones.Entity;
 
+import jakarta.persistence.*;
 import java.io.Serializable;
-import javax.persistence.*;
 /**
  *
  * @author el_pipe
  */
 @Entity
-@Table(name = "scex")
-public class Scex implements Serializable{
+@Table(name = "sipen")
+public class Sipen implements Serializable{
     
     @Id
     @Column
@@ -23,13 +23,11 @@ public class Scex implements Serializable{
     @Column
     private String apellido;
     @Column
-    private String exclusion; //seleccionar una (realizar un select o algo similar
-    @Column
     private int edad;
     @Column
     private int pension;
     @Column
-    private String afp; //select (tres opciones) en front y bd
+    private String afp;
 
     public int getId() {
         return id;
@@ -53,14 +51,6 @@ public class Scex implements Serializable{
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public String getExclusion() {
-        return exclusion;
-    }
-
-    public void setExclusion(String exclusion) {
-        this.exclusion = exclusion;
     }
 
     public int getEdad() {

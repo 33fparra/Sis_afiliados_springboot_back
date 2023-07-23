@@ -2,46 +2,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.example.finalPatrones.Scex;
+package com.example.finalPatrones.Service;
 
-import com.example.finalPatrones.Scex.ScexService;
-import com.example.finalPatrones.Scex.ScexRepositorio;
-import com.example.finalPatrones.Scex.Scex;
-
-import java.util.List;
+import com.example.finalPatrones.Entity.Login;
+import com.example.finalPatrones.Repository.LoginRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 /**
  *
  * @author el_pipe
  */
+
 @Service
-public class ScexServiceImp implements ScexService{
+public class LoginServiceImp implements LoginService {
     @Autowired
-    private ScexRepositorio repositorio;
+    private LoginRepositorio repositorio;
     
     @Override
-    public List<Scex> Listar(){
+    public List<Login> Listar(){
         return repositorio.findAll();
     }
     
     @Override
-    public Scex listarId(int id){
+    public Login listarId(int id){
         return repositorio.findById(id);
     }
     
     @Override
-    public Scex agregar(Scex s){
-        return repositorio.save(s);
+    public Login agregar(Login l){
+        return repositorio.save(l);
     }
     
     @Override
-    public Scex editar(Scex s){
-        return repositorio.save(s); //verificar y poner un método válido
+    public Login editar(Login l){
+        return repositorio.save(l); //verificar y poner un método válido
     }
     
     @Override
-    public Scex eliminar(int id){
+    public Login eliminar(int id){
         
         return null;   
     }

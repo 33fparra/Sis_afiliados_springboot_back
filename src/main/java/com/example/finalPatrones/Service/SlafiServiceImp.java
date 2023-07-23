@@ -2,47 +2,50 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.example.finalPatrones.Login;
+package com.example.finalPatrones.Service;
 
-import com.example.finalPatrones.Login.LoginService;
-import com.example.finalPatrones.Login.LoginRepositorio;
-import com.example.finalPatrones.Login.Login;
 
-import java.util.List;
+import com.example.finalPatrones.Entity.Slafi;
+import com.example.finalPatrones.Repository.SlafiRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 /**
  *
  * @author el_pipe
  */
 @Service
-public class LoginServiceImp implements LoginService {
+public class SlafiServiceImp implements SlafiService{
+    
     @Autowired
-    private LoginRepositorio repositorio;
+    private SlafiRepositorio repositorio;
     
     @Override
-    public List<Login> Listar(){
+    public List<Slafi> Listar(){
         return repositorio.findAll();
     }
     
     @Override
-    public Login listarId(int id){
+    public Slafi listarId(int id){
         return repositorio.findById(id);
     }
     
     @Override
-    public Login agregar(Login l){
-        return repositorio.save(l);
+    public Slafi agregar(Slafi s){
+        return repositorio.save(s);
     }
     
     @Override
-    public Login editar(Login l){
-        return repositorio.save(l); //verificar y poner un método válido
+    public Slafi editar(Slafi s){
+        return repositorio.save(s); //verificar y poner un método válido
     }
     
     @Override
-    public Login eliminar(int id){
+    public Slafi eliminar(int id){
         
         return null;   
     }
+   
 }

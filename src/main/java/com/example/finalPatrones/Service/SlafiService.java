@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package com.example.finalPatrones.Slafi;
+package com.example.finalPatrones.Service;
 
-import com.example.finalPatrones.Slafi.Slafi;
+import com.example.finalPatrones.Entity.Slafi;
+
 import java.util.List;
-import org.springframework.stereotype.Service;
 
 /**
  *
  * @author el_pipe
  */
-@Service
+
 public interface SlafiService {
     
     List<Slafi>Listar();
